@@ -3,7 +3,7 @@ function setup() {
 }
 
 function draw() {
-  background(1000);
+  background(200);
   // let value = 25;
   // let m = map(value, 0, 100, 0,     height);
   // ellipse(m, 70, 100, 100);
@@ -24,16 +24,14 @@ function draw() {
   let hm = map(h, 0, 24, 0,     height);
   fill(255,0,0, 255)
   rect((2*width)/3, 0, width/3, hm);
-  
-  
-  var intervalID = window.setInterval(minutes, 60000);
 
-function minutes() {
-  // go check API 
-  let curr_m = minute()
-  console.log("checking weather API");
-}
+
+  if (second()==0){
+    console.log(minute())
+  }
   
+  
+
   
 //   let h = hour();
 //   text('Current hour:\n' + s, 100,     180);
